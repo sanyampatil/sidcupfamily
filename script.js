@@ -1,14 +1,21 @@
-
-let cursr = document.querySelector("#cursor")
-console.log(cursr)
-
-
+cursr=document.querySelector("#cursor")
+bigCursr=document.querySelector("#cursorBlur")
 document.addEventListener("mousemove",function(dets){
-    // console.log(dets)
     cursr.style.left=dets.x+"px"
     cursr.style.top=dets.y+"px"
+    bigCursr.style.left=dets.x-200+"px"
+    bigCursr.style.top=dets.y+-200+"px"
 
 })
+
+
+
+// document.addEventListener("mousemove",function(dets){
+//     // console.log(dets)
+//     cursr.style.top=dets.y-150+"px"
+//     cursr.style.left=dets.x-150+"px"
+
+// })
 
 gsap.to(".nav",{
     backgroundColor:"#000",
@@ -40,4 +47,4 @@ gsap.to("#main",{
     }
 
 
-})
+})  
